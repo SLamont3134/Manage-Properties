@@ -2,11 +2,11 @@
 Demonstrates a text based menu and utilizes OOP. Manages Different properties that are created by the user.
 Utilizes input verification, exception handling, and class hierarchies.
 
-#Documentation
+# Documentation
 Link to JavaDocs Index can be found [here](ManageProperties/docs/index.html)
 
 
-#Author
+# Author
 
 Sean Lamont
 
