@@ -3,7 +3,7 @@ Demonstrates a text based menu and utilizes OOP. Manages Different properties th
 Utilizes input verification, exception handling, and class hierarchies.
 
 #Documentation
-Link to JavaDocs Index can be found[here]()
+Link to JavaDocs Index can be found [here](ManageProperties/docs/index.html)
 
 
 #Author
