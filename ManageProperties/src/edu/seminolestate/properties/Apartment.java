@@ -13,8 +13,10 @@ public class Apartment extends Property implements Serializable {
   // Implement the class variable(s) shown in the UML class diagram.
   private double unitRent;
 
-  // Implement the constructor shown in the UML class diagram. Call the set methods to update the
-  // class variables.
+  /**
+   * Implement the constructor shown in the UML class diagram. Call the set methods to update the
+   * class variables.
+   */
   public Apartment(
       int newPropertyID,
       String newAddress,
@@ -37,13 +39,14 @@ public class Apartment extends Property implements Serializable {
         newSquareFeet,
         newNumberOfBaths,
         newNumberOfBedrooms);
-    this.setUnitRent(newUnitRent);
+    setUnitRent(newUnitRent);
   }
 
-  /*
-   * Implement the get and set methods shown in the UML class diagram. The set methods must have the following edits: numeric
-   * parameter values must be greater than zero; String parameters values cannot be null or have a length less than one. Throw the
-   * IllegalPropertyArgumentException exception if a parameter is invalid. Instantiate the IllegalPropertyArgumentException with a
+  /**
+   * Implement the get and set methods shown in the UML class diagram. The set methods must have the
+   * following edits: numeric parameter values must be greater than zero; String parameters values
+   * cannot be null or have a length less than one. Throw the IllegalPropertyArgumentException
+   * exception if a parameter is invalid. Instantiate the IllegalPropertyArgumentException with a
    * descriptive error message.
    */
   public double getUnitRent() {
@@ -63,8 +66,10 @@ public class Apartment extends Property implements Serializable {
     // TODO Auto-generated method stub
     return 0;
   }
-  // Override the toString method. Call the superclass toString method and then add the values for
-  // the Apartment class.
+  /**
+   * Override the toString method. Call the superclass toString method and then add the values for
+   * the Apartment class.
+   */
   @Override
   public String toString() {
     return super.toString() + " Unit Rent " + unitRent;

@@ -12,8 +12,10 @@ public class House extends Property implements Serializable {
   private static final long serialVersionUID = 1L;
   private double lotSize;
 
-  // Implement the constructor shown in the UML class diagram. Call the set methods to update the
-  // class variables.
+  /**
+   * Implement the constructor shown in the UML class diagram. Call the set methods to update the
+   * class variables.
+   */
   public House(
       int newPropertyID,
       String newAddress,
@@ -36,13 +38,15 @@ public class House extends Property implements Serializable {
         newSquareFeet,
         newNumberOfBaths,
         newNumberOfBedrooms);
-    this.setLotSize(newLotSize);
+    setLotSize(newLotSize);
   }
-  /*
-   * Implement the get and set methods shown in the UML class diagram. The set methods must have the following edits:
-   * numeric parameter values must be greater than zero; String parameters values cannot be null or have a length less
-   *  than one. Throw the IllegalPropertyArgumentException exception if a parameter is invalid. Instantiate the
-   *  IllegalPropertyArgumentException with a descriptive error message.
+
+  /**
+   * Implement the get and set methods shown in the UML class diagram. The set methods must have the
+   * following edits: numeric parameter values must be greater than zero; String parameters values
+   * cannot be null or have a length less than one. Throw the IllegalPropertyArgumentException
+   * exception if a parameter is invalid. Instantiate the IllegalPropertyArgumentException with a
+   * descriptive error message.
    */
   public double getLotSize() {
     return lotSize;

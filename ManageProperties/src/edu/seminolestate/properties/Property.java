@@ -22,9 +22,20 @@ public abstract class Property implements Serializable, Comparable<Property> {
   private double numberOfBaths;
   private int numberOfBedrooms;
 
-  /*
-   * Implement the constructor shown in the UML class diagram.
-   * Call the set methods to update the class variables.
+  /**
+   * Implements the constructor shown in the UML class diagram. Call the set methods to update the
+   * class variables.
+   *
+   * @param newAddress address.
+   * @param newCity city.
+   * @param newNumberOfBaths number of baths.
+   * @param newNumberOfBedrooms number of bedrooms.
+   * @param newPropertyID property id.
+   * @param newSquareFeet Square footage.
+   * @param newState state.
+   * @param newValue approximate value of property.
+   * @param newZip zip code.
+   * @throws IllegalPropertyArgumentException thrown if a parameter is found to be invalid.
    */
   public Property(
       int newPropertyID,
@@ -37,15 +48,15 @@ public abstract class Property implements Serializable, Comparable<Property> {
       double newNumberOfBaths,
       int newNumberOfBedrooms)
       throws IllegalPropertyArgumentException {
-    this.setPropertyID(newPropertyID);
-    this.setAddress(newAddress);
-    this.setCity(newCity);
-    this.setState(newState);
-    this.setZip(newZip);
-    this.setValue(newValue);
-    this.setSquareFeet(newSquareFeet);
-    this.setNumberOfBaths(newNumberOfBaths);
-    this.setNumberOfBedrooms(newNumberOfBedrooms);
+    setPropertyID(newPropertyID);
+    setAddress(newAddress);
+    setCity(newCity);
+    setState(newState);
+    setZip(newZip);
+    setValue(newValue);
+    setSquareFeet(newSquareFeet);
+    setNumberOfBaths(newNumberOfBaths);
+    setNumberOfBedrooms(newNumberOfBedrooms);
   }
 
   public int getPropertyID() {
@@ -60,13 +71,15 @@ public abstract class Property implements Serializable, Comparable<Property> {
           "Illegal Property ID " + propertyID + " Must be a number greater than 0.");
   }
 
-  /*
-   * Implement the get and set methods shown in the UML class diagram. The set methods must have the following edits: numeric
-   *  parameter values must be greater than zero; String parameters values cannot be null or have a length less than one. Throw the
-   *  IllegalPropertyArgumentException exception if a parameter is invalid. Instantiate the IllegalPropertyArgumentException with a
-   *   descriptive error message.
+  /**
+   * Implement the get and set methods shown in the UML class diagram. The set methods must have the
+   * following edits: numeric parameter values must be greater than zero; String parameters values
+   * cannot be null or have a length less than one. Throw the IllegalPropertyArgumentException
+   * exception if a parameter is invalid. Instantiate the IllegalPropertyArgumentException with a
+   * descriptive error message.
+   *
+   * @return String, returns the address.
    */
-
   public String getAddress() {
     return address;
   }
@@ -162,12 +175,23 @@ public abstract class Property implements Serializable, Comparable<Property> {
       throw new IllegalPropertyArgumentException(
           "Illegal Number Of Bedrooms " + numberOfBedrooms + " Must be a number greater than 0.");
   }
-  // Override the compareTo method. Use the value for the comparison
+
+  /**
+   * Override the compareTo method. Use the value for the comparison
+   *
+   * @param objectToCompare The Property Object to compare.
+   * @return the resulting value.
+   */
   @Override
   public int compareTo(Property objectToCompare) {
     return (int) (this.value - objectToCompare.value);
   }
-  // Override the toString method
+
+  /**
+   * Overridden the toString method
+   *
+   * @return String description of Property.
+   */
   @Override
   public String toString() {
     return "Property ID: "
