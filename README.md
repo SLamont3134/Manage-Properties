@@ -7,8 +7,12 @@ Link to JavaDocs Index can be found [here](ManageProperties/docs/index.html)
 
 
 #Author
+
 Sean Lamont
+
 Spring 2019
+
 COP 2800
+
 Florida Gulf Coast University
 
